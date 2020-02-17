@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Assignment 5</title>
+</head>
+
+<body>
+	<h1 style="text-align: center">Welcome to Joe's Hotdog Stand!</h1>
+    <h2>Your Order</h2>
+	
+	<script language="javascript">
+        hotdogAmount = prompt("How many hotdogs?"); 
+        friesAmount = prompt("How many fries?"); 
+        sodaAmount = prompt("How many sodas?"); 
+        hotdogPrice = 3.25; 
+        friesPrice = 2; 
+        sodaPrice = 1.5; 
+        
+        hotdogTotal = hotdogAmount*hotdogPrice; 
+        friesTotal = friesAmount*friesPrice; 
+        sodaTotal = sodaAmount*sodaPrice; 
+        
+        subtotal = hotdogTotal + friesTotal + sodaTotal; 
+        
+        discountedSubtotal = (subtotal>20) ? subtotal*0.9:subtotal; 
+         
+        
+        tax = discountedSubtotal * 0.0625; 
+        finalSubtotal = discountedSubtotal + tax; 
+    
+        
+        document.write("#Hotdogs: " + hotdogAmount + " at $" + hotdogPrice + " is $" + hotdogTotal);
+        document.write("<br>"); 
+        document.write("#Fries: " + friesAmount + " at $" + friesPrice + " is $" + friesTotal);
+        document.write("<br>"); 
+        document.write("#Sodas: " + sodaAmount + " at $" + sodaPrice + " is $" + sodaTotal);
+        document.write("<br>"); 
+        document.write(discount = (subtotal>20) ? "You qualified for our 10% discount!": ""); 
+        document.write("<br>");
+        document.write("Subtotal: $" + discountedSubtotal);
+        document.write("<br>");
+        document.write("Meals Tax: $" + tax); 
+        document.write("<br>");
+        document.write("Total: $" + finalSubtotal);    
+	</script>
+    
+	
+</body>
+</html>
+
